@@ -1,0 +1,18 @@
+name: InstallAngular
+description: this document installs node on ubuntu
+schemaVersion: 1.0
+
+phases:
+    - name: build
+      steps:
+        - name: InstallAngular
+          action: ExecuteBash
+          inputs:
+            commands:
+                - sudo apt-get update -y
+                - sudo apt install nodejs -y
+                - sudo apt install npm -y
+                - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+                - sudo apt-get install -y nodejs
+                - sudo npm install npm@latest -g
+                - sudo npm install -g @angular/cli > /dev/null
